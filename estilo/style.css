@@ -1,0 +1,211 @@
+/* Estilos Existentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+}
+
+html, body {
+    height: 100%; /* Garante que o corpo preencha toda a altura da página */
+}
+
+main {
+    flex: 1; /* Faz a seção principal ocupar o espaço restante */
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 200px; /* Aumente ou diminua conforme necessário */
+    margin-top: 20px; /* Margem superior no header */
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e63946;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+    background-color: #ffe3e3;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.busca input {
+    border: none;
+    background: none;
+    padding: 5px;
+    outline: none;
+    color: #ff6b6b;
+}
+
+.busca button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.busca img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Seção "Sobre Nós" */
+.sobre-nos-wrapper {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.container-sobre-nos {
+    display: flex; /* Flexbox para alinhar o texto e os cartões lado a lado */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.sobre-nos {
+    flex: 1; /* Ocupa o espaço necessário */
+    max-width: 500px;
+}
+
+.sobre-nos h1 {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.sobre-nos p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Container para os cartões */
+.cartoes-informacao {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 colunas com largura ajustada automaticamente */
+    gap: 20px; /* Espaço entre os cartões */
+    justify-content: flex-end; /* Alinha os cartões à direita */
+    flex: 1;
+}
+
+/* Cartões de informação */
+.cartao {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; /* Flexbox para alinhar o ícone e o texto lado a lado */
+    align-items: center;
+    gap: 15px; /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s;
+    width: 250px; /* Tamanho fixo dos cartões para mantê-los consistentes */
+}
+
+.cartao img {
+    width: 40px;
+    height: 40px;
+}
+
+.cartao h2 {
+    font-size: 1.2rem;
+}
+
+.cartao:hover {
+    background-color: #e63946;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0b0b64;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0px 3px 10px #464646;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    transform: translateY(-5px);
+}
+
+.rede-social {
+    margin-top: 20px;
+}
+
+.rede-social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.rede-social li {
+    margin-right: 15px;
+}
+
+.rede-social img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.rede-social img:hover {
+    transform: scale(1.1);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cartoes-informacao {
+        grid-template-columns: 1fr; /* Coloca os cartões em uma coluna no mobile */
+        justify-content: center; /* Centraliza os cartões no mobile */
+    }
+}
